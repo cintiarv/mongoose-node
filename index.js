@@ -2,7 +2,6 @@ import mongoose from "mongoose"; //podemos utilizar módulos ya que agregamos ty
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-console.log(process.env);
 
 
 const {DB_USER, DB_PASSWORD, DB_NAME, DB_HOST } = process.env //datos guardados en .env 
@@ -70,19 +69,19 @@ mongoose.connect(URL) //regresa una promesa
     .then(async (connection) => {
         console.log('Database conected c:'); //aquí ya puedo hacer mi llamado a mi db 
 
-      /*  const allKoders = await Koder.find({}) //traer todos los koders. todas las acciones cuando uses una db son asíncronas por lo tanto regresa una promesa 
-        console.log(allKoders); */
+       const allKoders = await Koder.find({}) //traer todos los koders. todas las acciones cuando uses una db son asíncronas por lo tanto regresa una promesa 
+        console.log(allKoders);  
 
         //crear un koder en mongo se usa create 
  
-        const newKoder = {
+  /*       const newKoder = {
             name: 'Rodri',
             lastName: 'Montoya',
             age: 22,
             gender: 'h'
         }
          const koderCreated = await Koder.create(newKoder)
-        console.log(koderCreated);  
+        console.log(koderCreated);   */
 
         //actualizar un koder 
        /*  const newData = {
