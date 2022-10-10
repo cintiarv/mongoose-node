@@ -2,6 +2,7 @@ import mongoose from "mongoose"; //podemos utilizar módulos ya que agregamos ty
 import * as dotenv from 'dotenv'
 dotenv.config()
 
+//console.log(process.env);
 
 
 const {DB_USER, DB_PASSWORD, DB_NAME, DB_HOST } = process.env //datos guardados en .env 
@@ -74,20 +75,20 @@ mongoose.connect(URL) //regresa una promesa
 
         //crear un koder en mongo se usa create 
  
-  /*       const newKoder = {
+        const newKoder = {
             name: 'Rodri',
             lastName: 'Montoya',
             age: 22,
             gender: 'h'
         }
          const koderCreated = await Koder.create(newKoder)
-        console.log(koderCreated);   */
+        console.log(koderCreated);   
 
         //actualizar un koder 
        /*  const newData = {
             lastName: 'Ruiz Verdugo'
         }
-        const koderUpdated = await Koder.findByIdAndUpdate('633ceecc77adfb6bdaf27ad8', newData, {new: true})
+        const koderUpdated = await Koder.findByIdAndUpdate('633ceecc77adfb6bdaf27ad8', newData, {new: true}) //para que nos regrese el dato actualizado, no el anterior
         console.log(koderUpdated);
  */
 
